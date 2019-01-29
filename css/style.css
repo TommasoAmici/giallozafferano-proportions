@@ -1,0 +1,8 @@
+.input-qty {
+  width: 50px;
+  border-top: 1.5px solid rgb(248, 150, 46);
+  border-left: 1.5px solid rgb(248, 150, 46);
+  border-right: 1.5px solid rgb(252, 208, 163);
+  border-bottom: 1.5px solid rgb(252, 208, 163);
+  border-radius: 3px !important;
+}

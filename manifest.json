@@ -13,7 +13,8 @@
   "content_scripts": [
     {
       "matches": ["https://ricette.giallozafferano.it/*"],
-      "js": ["src/inject/inject.js"]
+      "js": ["src/inject/inject.js"],
+      "css": ["css/style.css"]
     }
   ]
 }
