@@ -5,19 +5,26 @@ const updateAllValues = factor => {
   });
 };
 
+const re = /([1-9]\d*|0\.\d*)/;
+const makeInputField = ingredient => {
+  // no leading zeros
+  ingredient.innerHTML = ingredient.innerHTML.replace("½", "0.5");
+  const recipeQty = re.exec(ingredient.innerHTML)[0];
+  return ingredient.innerHTML.replace(
+    recipeQty,
+    `<input type="number" value="${recipeQty}" data-ogvalue="${recipeQty}" class="input-qty">`
+  );
+};
+
+// yield
 const main = () => {
   let factor = 1;
   const ingredients = document.getElementsByClassName("ingredient");
+  const numPersons = document.getElementsByClassName("yield")[0];
+  numPersons.innerHTML = makeInputField(numPersons);
   Array.prototype.map.call(ingredients, i => {
     if (!i.innerText.includes("q.b.")) {
-      // no leading zeros
-      const re = /([1-9]\d*|0\.\d*)/;
-      i.innerHTML = i.innerHTML.replace("½", "0.5");
-      const recipeQty = re.exec(i.innerHTML)[0];
-      i.innerHTML = i.innerHTML.replace(
-        recipeQty,
-        `<input type="number" value="${recipeQty}" data-ogvalue="${recipeQty}" class="input-qty">`
-      );
+      i.innerHTML = makeInputField(i);
     }
   });
   const inputs = document.getElementsByClassName("input-qty");
