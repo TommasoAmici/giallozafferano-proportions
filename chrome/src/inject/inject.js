@@ -29,11 +29,10 @@ const main = () => {
   });
 };
 
-const checkIfReady = () => {
-  if (document.readyState !== "interactive") {
-    checkIfReady();
-  }
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
+    main();
+  });
+} else {
   main();
-};
-
-checkIfReady();
+}
