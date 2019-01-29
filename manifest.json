@@ -1,0 +1,23 @@
+{
+  "name": "Proporzioni Giallozafferano.it",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Un'estensione per calcolare le proporzioni di una ricetta",
+  // "homepage_url": "",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": ["src/bg/background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://ricette.giallozafferano.it/*"],
+      "js": ["src/inject/inject.js"]
+    }
+  ]
+}
