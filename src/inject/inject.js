@@ -11,7 +11,8 @@ const main = () => {
   Array.prototype.map.call(ingredients, i => {
     if (!i.innerText.includes("q.b.")) {
       // no leading zeros
-      const re = /[1-9]\d*/;
+      const re = /([1-9]\d*|0\.\d*)/;
+      i.innerHTML = i.innerHTML.replace("½", "0.5");
       const recipeQty = re.exec(i.innerHTML)[0];
       i.innerHTML = i.innerHTML.replace(
         recipeQty,
