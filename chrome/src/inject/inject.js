@@ -1,7 +1,7 @@
 const updateAllValues = factor => {
   const inputs = document.getElementsByClassName("input-qty");
   Array.prototype.map.call(inputs, i => {
-    i.value = i.dataset.ogvalue * factor;
+    i.value = Math.round(i.dataset.ogvalue * factor * 10) / 10;
   });
 };
 
