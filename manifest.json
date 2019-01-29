@@ -10,11 +10,6 @@
     "96": "icons/icon96.png",
     "128": "icons/icon128.png"
   },
-  "default_locale": "en",
-  "background": {
-    "scripts": ["src/bg/background.js"],
-    "persistent": true
-  },
   "content_scripts": [
     {
       "matches": ["https://ricette.giallozafferano.it/*"],
