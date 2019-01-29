@@ -16,5 +16,10 @@
       "js": ["src/inject/inject.js"],
       "css": ["css/style.css"]
     }
-  ]
+  ],
+  "applications": {
+    "gecko": {
+      "id": "ext@firefox.org"
+    }
+  }
 }
