@@ -1,6 +1,6 @@
 {
   "name": "Proporzioni Giallozafferano.it",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Un'estensione che calcola le proporzioni delle ricette su Giallozafferano.it",
   "homepage_url": "https://github.com/TommasoAmici/giallozafferano-proportions",
